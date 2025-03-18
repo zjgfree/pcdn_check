@@ -41,9 +41,9 @@ MIN_UNIQUE_ISPS = 3           # 至少涉及的运营商数
 
 ### 3. 运行程序
 ```bash
-python pcap_analyzer.py [PCAP文件路径]
+python pcdncheck.py [PCAP文件路径]
 # 示例：
-python pcap_analyzer.py tcpdump.pcap
+python pcdncheck.py tcpdump.pcap
 ```
 
 
