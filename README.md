@@ -19,7 +19,7 @@ pip install -r requirements.txt
 scapy>=2.4.5          # 网络数据包解析
 pandas>=1.3.0        # 数据处理
 openpyxl>=3.0.7      # Excel 文件写入
-xdbSearcher>=1.0.0   # IP 归属地查询（需确认库来源）
+tqdm                 # 进度条
 ```
 
 
@@ -79,19 +79,12 @@ python pcdncheck.py tcpdump.pcap
 
 ## ⚙️ 配置说明
 
-### 1. IP 数据库路径
+### IP 数据库路径
 修改代码中的数据库路径：
 ```python
 db_path = os.path.join(script_dir, "ip2region.xdb")
 # 建议：将数据库文件放置在项目的根目录下
 ```
-
-### 2. 内网 IP 过滤
-自动过滤以下内网 IP 段：
-- `10.0.0.0/8`
-- `172.16.0.0/12`
-- `192.168.0.0/16`
-
 
 ## 📄 版权声明
 ```
