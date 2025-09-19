@@ -28,7 +28,7 @@ class XdbSearcher(object):
     # 整个读取xdb，保存在内存中
     contentBuff = None
 
-    @staticmethod
+    @staticmethod # 静态方法属于类本身，而不是类的实例。调用时可以直接通过 类名.方法名() 的方式，无需先创建类的对象
     def loadVectorIndexFromFile(dbfile):
         try:
             f = io.open(dbfile, "rb")
@@ -171,7 +171,7 @@ class XdbSearcher(object):
         self.contentBuff = None
 
 
-if __name__ == '__main__':
+if __name__ == '__main__': # 如果当前脚本是直接被执行的
     ip_array = [
         "1.2.3.4",
         "192.168.1.1"

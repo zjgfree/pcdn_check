@@ -43,7 +43,7 @@ def analyze_pcap(file_path, verbose=False):
     log_message(f"开始分析 PCAP 文件: {file_path}", verbose)
 
     # 初始化IP数据库
-    script_dir = os.path.dirname(os.path.abspath(__file__))
+    script_dir = os.path.dirname(os.path.abspath(__file__)) # 在 Python 中，__file__ 是一个内置变量，用于表示当前执行的脚本文件的路径（包含文件名）
     db_path = os.path.join(script_dir, IP2REGION_FILENAME)
     cb = XdbSearcher.loadContentFromFile(dbfile=db_path)
     searcher = XdbSearcher(contentBuff=cb)
